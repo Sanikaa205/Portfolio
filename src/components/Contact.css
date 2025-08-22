@@ -1,0 +1,141 @@
+/* NEW wrapper to center everything on screen */
+.contact-page-container {
+  min-height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  /* background: linear-gradient(270deg, #070342a0, #312249d1, #8e76195a, #12123b);
+  background-size: 800% 800%;
+  animation: animatedGradient 12s ease infinite;
+  height: 120vh; */
+
+
+
+  box-sizing: border-box;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.contact-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(118, 52, 251, 0.56);
+}
+
+/* Left Section */
+.contact-left,
+.contact-right {
+  flex: 1;
+  padding: 40px;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.contact-left {
+  background: #32223ea3;
+}
+
+.contact-left h1 {
+  color: #a78bfa;
+  margin-bottom: 10px;
+  font-size: 2.8rem;
+}
+
+.contact-left p {
+  font-size: 1.2rem;
+  color: #cdcdcd;
+  margin-bottom: 20px;
+}
+
+.contact-left span {
+  color: #a78bfa;
+  font-weight: 600;
+}
+
+.contact-left a {
+  color: #1a78dd;
+  text-decoration: none;
+}
+
+.contact-left a:hover {
+  text-decoration: underline;
+  color: #a78bfa;
+}
+
+/* Right Section */
+.contact-right {
+  background: #252529;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form h2 {
+  font-size: 2.5rem;
+  color: #a78bfa;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #a78bfa;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: #a78bfa;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #7c3aed;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-left,
+  .contact-right {
+    padding: 30px 20px;
+  }
+
+  .contact-left h1,
+  .contact-form h2 {
+    font-size: 2rem;
+  }
+}
+

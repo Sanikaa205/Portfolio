@@ -1,0 +1,130 @@
+.projects-section {
+  
+  background-color: #0f0f1a;
+  color: #fff;
+  min-height: 100vh;           /* take full screen height */
+  display: flex;               
+  flex-direction: column;      
+  justify-content: center;     /* center vertically */
+  align-items: center;         /* center horizontally */
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.projects-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.projects-subtitle {
+  color: #aaa;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  font-size: 1rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto); /* exactly 3 per row */
+  gap: 50px;
+  justify-content: center;   /* center the grid content */
+  margin: 0 auto;            /* push the whole grid to center */
+  width: fit-content;        /* shrink grid width to its content */
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, auto); /* 2 per row */
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* 1 per row, full width */
+  }
+}
+
+
+.project-card {
+  width: 100%;
+  height: auto;
+  background-color: #1a1a2e;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+}
+
+.project-img-wrapper {
+  position: relative;
+}
+
+.project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.project-icons a {
+  color: white;
+  background: #1f1f2e;
+  padding: 6px;
+  border-radius: 50%;
+  transition: background 0.3s;
+  font-size: 1.2rem;
+}
+
+.project-icons a:hover {
+  background: #a855f7;
+}
+
+.project-details {
+  padding: 20px;
+}
+
+.project-title {
+  font-size: 1.4rem;
+  color: #a855f7;
+  margin-bottom: 10px;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 15px;
+  min-height: 60px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: #2a2a40;
+  color: #b980ff;
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-weight: 500;
+}

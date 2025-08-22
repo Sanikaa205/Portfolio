@@ -1,0 +1,195 @@
+.about-section {
+  min-height: 100vh;           /* take full screen height */
+  display: flex;               
+  flex-direction: column;      
+  justify-content: center;     /* center vertically */
+  align-items: center;         /* center horizontally */
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: 2.2rem;
+  color: #7c3aed;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  max-width: 900px;
+  justify-content: center;
+  font-family: 'Times New Roman';
+  margin: 0 auto 30px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7c7979;
+  line-height: 1.6;
+  padding: 0 20px;
+  font-weight: 400;
+}
+
+.timeline-heading {
+  font-size: 1.8rem;
+  color: #7c3aed;
+  margin: 40px 0 20px;
+  text-align: center;
+}
+
+.edu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.edu-card {
+ display: flex;
+  flex-direction: row;
+  max-width: 850px;
+  width: 100%;
+  background:linear-gradient(#2e0f50d0, #291e3774);
+  padding: 20px;
+  box-shadow: none; /* ❌ No glow by default */
+  gap: 50px;
+  align-items: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+
+.edu-card:hover {
+    transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(107, 56, 225, 0.784); /* ✅ Glow only on hover */
+  z-index: 2; 
+}
+
+.edu-footer span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+
+.edu-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 12px;
+  background-color: rgb(255, 255, 248);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.edu-details {
+  flex: 1;
+}
+
+.edu-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #bdbdbd;
+  margin: 0;
+}
+
+.edu-status {
+  display: inline-block;
+  margin-top: 6px;
+  background-color: #fde68a;
+  color: #b45309;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.edu-status.current {
+  background-color: #d8b4fe;
+  color: #6b21a8;
+}
+
+.edu-sub {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #d1d0d0;
+}
+
+.edu-desc {
+  font-size: 14px;
+  margin-top: 8px;
+  color: #c7c7c7;
+}
+
+.edu-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 12px;
+  font-size: 13.5px;
+  color: #c5c5c5;
+}
+
+.edu-meta i {
+  margin-right: 6px;
+  color: #7c3aed;
+}
+
+.about-buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.about-btn {
+  padding: 10px 22px;
+  border-radius: 8px;
+  background-color: #7c3aed;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.about-btn.outline {
+  background-color: transparent;
+  border: 2px solid #7c3aed;
+  color: #7c3aed;
+}
+
+.about-btn:hover {
+  transform: scale(1.05);
+}
+
+
+/*timeline*/
+
+.timeline-subtitle {
+  max-width: 700px;
+  font-family: 'Times New Roman';
+  margin: 0 auto 30px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7c7979;
+  line-height: 1.6;
+  padding: 0 20px;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .edu-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .edu-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .edu-logo {
+    margin-bottom: 10px;
+  }
+}

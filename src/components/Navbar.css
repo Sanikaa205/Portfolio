@@ -1,0 +1,82 @@
+.navbar {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2.5rem;
+
+  background: rgba(25, 21, 35, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(to right, #b56dff, #facc15);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f3ff6fea;
+  transform: translateY(-2px);
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+}
+
+/* Optional Glow Effect on Hover */
+.nav-links a:hover {
+  text-shadow: 0 0 5px #b56dff, 0 0 10px #facc15;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2.8rem;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+.logo-img {
+  height: 70px;
+  margin-right: 10px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
