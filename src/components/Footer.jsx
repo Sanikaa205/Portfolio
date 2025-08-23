@@ -13,7 +13,7 @@ function Footer() {
         <a href="https://www.linkedin.com/in/sanika-shinde-006b932b5/" target="_blank" rel="noreferrer">
           <FaLinkedin />
         </a>
-        <a href="https://www.instagram.com/yourusername" target="_blank" rel="noreferrer">
+        <a href="https://www.instagram.com/sanikashinde_2105/" target="_blank" rel="noreferrer">
           <FaInstagram />
         </a>
       </div>

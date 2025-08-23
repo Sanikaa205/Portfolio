@@ -1,6 +1,6 @@
 .projects-section {
   
-  background-color: #0f0f1a;
+ 
   color: #fff;
   min-height: 100vh;           /* take full screen height */
   display: flex;               
@@ -15,7 +15,7 @@
 .projects-heading {
   font-size: 3rem;
   font-weight: 800;
-  color: #fff;
+  color: #7c3aed;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -62,8 +62,8 @@
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+  transform: translateY(-8px);
+   box-shadow: 0 10px 20px rgba(152, 127, 205, 0.811);
 }
 
 .project-img-wrapper {
@@ -85,17 +85,14 @@
 }
 
 .project-icons a {
-  color: white;
-  background: #1f1f2e;
+  
+  background: #fefeff;
   padding: 6px;
   border-radius: 50%;
   transition: background 0.3s;
   font-size: 1.2rem;
 }
 
-.project-icons a:hover {
-  background: #a855f7;
-}
 
 .project-details {
   padding: 20px;

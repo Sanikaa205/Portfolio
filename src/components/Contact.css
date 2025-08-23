@@ -74,7 +74,7 @@
 
 /* Right Section */
 .contact-right {
-  background: #252529;
+  background: var(--surface);
   display: flex;
   flex-direction: column;
   justify-content: center;

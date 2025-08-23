@@ -1,52 +1,225 @@
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+ /* ---------------- Theme Tokens (DARK default) ---------------- */
+:root {
+  --bg: #191523;
+  --bg-soft: #1e172b;
+  --surface: #1a1a2e;
+  --surface-2: #252529;
+  --text: #ffffff;
+  --text-muted: #c7c7c7;
+  --border-color: rgba(255,255,255,0.12);
 
+  --primary: #7c3aed;                 /* Purple brand */
+  --primary-weak: #a78bfa;
+  --chip-bg: #2a2a40;
+  --chip-text: #b980ff;
+
+  --scroll-thumb: #b56dff;
+  --scroll-track: #1e1523;
+
+  --hero-gradient: linear-gradient(270deg, #391f49a0, #3a2e4dd1, #706228ac, #232360);
+}
 
 body {
-  font-family: 'Times New Roman', serif;
-  background-color: #191523; 
-  color: #ffffff;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
 }
 
+/* Existing scrollbar vars will keep working */
+::-webkit-scrollbar-thumb { background: var(--scroll-thumb); }
+::-webkit-scrollbar-track { background: var(--scroll-track); }
 
-.container {
+/* ---------------- Light theme overrides ---------------- */
+body.light {
+  --bg: #f7f7fb;              /* soft off-white */
+  --bg-soft: #f0eff7;
+  --surface: #ffffff;
+  --surface-2: #f8f8ff;
+  --text: #1f2937;             /* slate-800 */
+  --text-muted: #6b7280;
+  --border-color: rgba(0,0,0,0.08);
+
+  --primary: #7c3aed;          /* same brand purple */
+  --primary-weak: #8b5cf6;
+  --chip-bg: #eef2ff;          /* indigo-50 */
+  --chip-text: #4f46e5;
+
+  --scroll-thumb: #c9c2ff;
+  --scroll-track: #e9e8f5;
+
+  /* softer hero gradient for light */
+  --hero-gradient: linear-gradient(270deg, #f5f3ff, #ede9fe, #eef2ff, #ffffff);
+}
+
+/* Smooth theme transition */
+* { transition: background-color .25s ease, color .25s ease, border-color .25s ease; }
+
+/* ====== Global surfaces ====== */
+body.light .navbar {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+body.light .nav-links a { color: var(--text); }
+body.light .nav-links a:hover { color: var(--primary-weak); text-shadow: none; }
+
+/* Intro / Hero */
+body.light .intro-wrapper { background: var(--hero-gradient); }
+body.light .gradient-welcome {
+  background: linear-gradient(to right, var(--primary), #4338ca);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+body.light .gradient-name {
+  background: linear-gradient(to right, #4338ca, #ec4899);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+/* Sections bg */
+body.light .projects-section,
+body.light .skills-section,
+body.light .about-section,
+body.light .contact-right {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Cards / surfaces */
+body.light .project-card,
+body.light .contact-right,
+body.light .contact-left {
+  background: var(--surface);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border: 1px solid var(--border-color);
+}
+body.light .project-title { color: var(--primary); }
+body.light .project-desc { color: var(--text-muted); }
+body.light .project-icons a { background: var(--surface-2); }
+
+/* Chips / tags */
+body.light .tag {
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  border: 1px solid var(--border-color);
+}
+
+/* Skills */
+body.light .skill-card { background: var(--surface); border: 1px solid var(--border-color); }
+body.light .skill-name { color: var(--text); }
+body.light .skill-percent { color: var(--text-muted); }
+body.light .progress-bar { background: #ececff; }
+body.light .progress-fill { background: linear-gradient(to right, var(--primary), var(--primary-weak)); }
+
+/* About */
+body.light .about-title,
+body.light .timeline-heading { color: var(--primary); }
+body.light .about-content p,
+body.light .timeline-subtitle { color: var(--text-muted); }
+
+/* Contact */
+body.light .contact-left { background: var(--surface-2); }
+body.light .contact-left p { color: var(--text-muted) !important; }
+body.light .contact-form input,
+body.light .contact-form textarea {
+  background: #ffffff;
+  color: var(--text);
+  border: 1px solid var(--border-color);
+}
+body.light .contact-form input:focus,
+body.light .contact-form textarea:focus {
+  outline: 2px solid var(--primary);
+}
+
+/* Footer */
+body.light .footer {
+  background: var(--surface-2);
+  color: var(--text-muted);
+}
+body.light .footer-icons a { color: var(--primary); }
+body.light .footer-icons a:hover { color: #111; }
+
+/* Scrollbars (already using vars) handled by tokens */
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 1rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+body.light .theme-toggle-btn:hover {
+  background: rgba(124, 58, 237, 0.08);
+}
+
+/* 🌙 DARK THEME */
+body.dark .edu-card {
+  background: #1e1e2f; /* Dark card */
+  color: #ffffff;
+}
+
+/* ☀️ LIGHT THEME */
+body.light .edu-card {
+  background: #f8f9fa; /* Lighter background */
+  color: #333;/* Softer text */
+  border: 1px solid #e0e0e0;
+}
+
+/* Navbar name color */
+body.dark .logo {
+  color: white;
+}
+body.light .logo {
+  color: black;
+}
+
+/* Project Heading fix */
+body.light .projects h2,
+body.dark .projects h2 {
+  color: #a855f7; /* keep purple always */
+}
+/* Project icons look same in both themes */
+.project-icon {
+  color: #a855f7;  /* purple (same as dark) */
+}
+/* Light theme card */
+body.light .project-card {
+  background: #ffffff;  /* white card */
+  color: #333;          /* dark text */
+  border: 1px solid #e0e0e0;
+}
+
+/* Light theme hover */
+body.light .project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(97, 77, 157, 0.497);
+}
+/* Light theme icon */
+body.light .project-icon {
+  color: black;
+
+.project-icon {
+  font-size: 2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+/* Dark theme icon */
+body.dark .project-icon {
+  color: white;
 }
 
 
-::-webkit-scrollbar {
-  width: 8px;
+/* Dark theme hover */
+body.dark .project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
-::-webkit-scrollbar-thumb {
-  background: #b56dff;
-  border-radius: 10px;
-}
-::-webkit-scrollbar-track {
-  background: #1e1523;
-}
-html, body, #root {
-  height: 100%;
-}
-
-.scroll-fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.scroll-fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
