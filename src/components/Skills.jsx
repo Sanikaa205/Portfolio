@@ -19,6 +19,9 @@ import MongoLogo from "../assets/mongodb.png";
 import SQLLogo from "../assets/sql.png";
 import MySQLLogo from "../assets/mysql.png";
 import cPlusPlusLogo from "../assets/c++.png";
+import flaskLogo from "../assets/flask.jpg";
+import mlLogo from "../assets/ml.png";
+import nlpLogo from "../assets/nlp.jpg";
 
 
 
@@ -41,7 +44,10 @@ const allSkills = [
   { name: "MongoDB", value: 30, img: MongoLogo, category: "Backend" },
   { name: "SQL", value: 60, img: SQLLogo, category: "Backend" },
   { name: "MySQL", value: 60, img: MySQLLogo, category: "Tools" },
-  { name: "C++", value: 60, img: cPlusPlusLogo, category: "Languages" } 
+  { name: "C++", value: 60, img: cPlusPlusLogo, category: "Languages" },
+  { name: "Flask", value: 35, img: flaskLogo, category: "Backend" },
+  { name: "Machine Learning", value: 30, img: mlLogo, category: "Backend" },
+  { name: "NLP", value: 25, img: nlpLogo, category: "Backend" } 
 
 ];
 

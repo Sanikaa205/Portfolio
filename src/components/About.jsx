@@ -4,6 +4,7 @@ import FadeInSection from "./FadeInSection";
 import schoolLogo from "../assets/school.jpg";
 import collegeLogo from "../assets/college.png";
 import engineeringLogo from "../assets/engineering.png";
+import resume from "../assets/Resume_1.pdf";
 
 
 function About() {
@@ -88,7 +89,7 @@ function About() {
         </div>
 
         <div className="about-buttons">
-          <a href="/Resume.pdf" target="_blank" className="about-btn">Download Resume</a>
+          <a href={resume} target="_blank" rel="noopener noreferrer" className="about-btn">Download Resume</a>
           <a href="#contact" className="about-btn outline">Contact Me</a>
         </div>
       </section>

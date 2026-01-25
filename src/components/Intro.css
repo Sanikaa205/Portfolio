@@ -110,6 +110,7 @@
 
 .gradient-welcome {
   background: linear-gradient(to right, #a855f7, #ffffff, #facc15);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -127,6 +128,7 @@
 
 .gradient-name {
   background: linear-gradient(to right, #8b5cf6, #ec4899);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

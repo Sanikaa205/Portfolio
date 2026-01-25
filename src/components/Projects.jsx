@@ -9,6 +9,9 @@ import currencyConverterImg from "../assets/currency-converter.png";
 import scannerGeneratorImg from "../assets/scanner.jpg";
 import speedotypeImg from "../assets/speedotype.jpg";
 import feedbackIMG from "../assets/feedback.jpg";
+import fridgechefImg from "../assets/fridgechef.png";
+import edurightsImg from "../assets/edurights.png";
+import diabetesImg from "../assets/diabetes.png";
 import FadeInSection from "./FadeInSection";
 
 const projectList = [
@@ -59,6 +62,30 @@ const projectList = [
     codeLink: "https://github.com/your/feedback-form",
     tech: ["React", "Firebase"],
     desc: "Collect feedback securely and display in real-time using Firebase database.",
+  },
+  {
+    title: "FridgeChef – Recipe Generator",
+    image: fridgechefImg,
+    liveLink: "http://fridge-chef-fsd.vercel.app",
+    codeLink: "https://github.com/Sanikaa205/FridgeChef",
+    tech: ["HTML", "CSS", "JavaScript", "REST API"],
+    desc: "Recipe generator website that suggests recipes based on ingredients with clean, easy-to-use interface.",
+  },
+  {
+    title: "EduRights – Legal Awareness Platform",
+    image: edurightsImg,
+    liveLink: "https://edurights.vercel.app/",
+    codeLink: "https://github.com/Sanikaa205/EduRights",
+    tech: ["React", "Vite", "Node.js", "Express.js", "MongoDB", "JWT"],
+    desc: "MERN stack platform spreading awareness about children's rights through modules, quizzes, games with progress tracking.",
+  },
+  {
+    title: "Diabetes Prediction System",
+    image: diabetesImg,
+    liveLink: "https://sanika2105.pythonanywhere.com/",
+    codeLink: "https://github.com/Sanikaa205/Diabetes-Prediction-System",
+    tech: ["Python", "Flask", "Machine Learning", "HTML", "CSS"],
+    desc: "ML-powered web app predicting diabetes risk using health inputs with trained model integrated via Flask backend.",
   },
 ];
 

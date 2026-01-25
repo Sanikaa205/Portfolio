@@ -68,17 +68,19 @@ body.light .nav-links a:hover { color: var(--primary-weak); text-shadow: none; }
 body.light .intro-wrapper { background: var(--hero-gradient); }
 body.light .gradient-welcome {
   background: linear-gradient(to right, var(--primary), #4338ca);
+  background-clip: text;
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
 body.light .gradient-name {
   background: linear-gradient(to right, #4338ca, #ec4899);
+  background-clip: text;
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
 
 /* Sections bg */
 body.light .projects-section,
 body.light .skills-section,
-body.light .about-section,
+body.light .about-section ,
 body.light .contact-right {
   background: var(--bg);
   color: var(--text);
