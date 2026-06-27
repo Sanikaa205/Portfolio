@@ -17,6 +17,8 @@ import speedotypeImg from "../assets/speedotype.jpg";
 import feedbackIMG from "../assets/feedback.jpg";
 import EduRightsImg from "../assets/edurights.png";
 import depressionImg from "../assets/depression.png";
+import fridgechefImg from "../assets/fridgechef.png";
+import diabetesImg from "../assets/diabetes.png";
 
 const projectList = [
   {
