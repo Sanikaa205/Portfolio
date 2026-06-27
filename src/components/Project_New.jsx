@@ -75,6 +75,26 @@ const projectList = [
   tech: ["React", "Flask", "RoBERTa", "Python", "Machine Learning"],
   desc: "AI-powered mental health assessment platform that analyzes user text to predict depression severity using a fine-tuned RoBERTa model and provides personalized insights.",
 },
+{
+
+    title: "FridgeChef – Recipe Generator",
+    image: fridgechefImg,
+    liveLink: "http://fridge-chef-fsd.vercel.app",
+    codeLink: "https://github.com/Sanikaa205/FridgeChef",
+    tech: ["HTML", "CSS", "JavaScript", "REST API"],
+    desc: "Recipe generator website that suggests recipes based on ingredients with clean, easy-to-use interface.",
+
+  },
+
+  {
+    title: "Diabetes Prediction System",
+    image: diabetesImg,
+    liveLink: "https://sanika2105.pythonanywhere.com/",
+    codeLink: "https://github.com/Sanikaa205/Diabetes-Prediction-System",
+    tech: ["Python", "Flask", "Machine Learning", "HTML", "CSS"],
+    desc: "ML-powered web app predicting diabetes risk using health inputs with trained model integrated via Flask backend.",
+
+  },
 
 ];
 
