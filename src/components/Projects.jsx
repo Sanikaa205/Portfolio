@@ -60,6 +60,14 @@ const projectList = [
     tech: ["React", "Firebase"],
     desc: "Collect feedback securely and display in real-time using Firebase database.",
   },
+  {
+    title: "EduRights",
+    image: weatherImg,
+    liveLink: "https://mausamly.netlify.app/",
+    codeLink: "https://github.com/Sanikaa205/Weather",
+    tech: ["HTML", "CSS", "JavaScript", "OpenWeather API"],
+    desc: "Weather forecast app displaying real-time temperature, humidity, and more with elegant UI.",
+  },
 ];
 
 function Projects() {

@@ -1,0 +1,496 @@
+/* ============================================================
+   Project_New.css  –  Premium 3D Carousel
+   Uses portfolio theme tokens from index.css
+   ============================================================ */
+
+/* ── Section ── */
+.pn-section {
+  min-height: 100vh;
+  padding: 100px 5% 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Header ── */
+.pn-header {
+  text-align: center;
+  max-width: 640px;
+}
+
+.pn-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+
+.pn-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 16px;
+  line-height: 1.15;
+}
+
+.pn-subtitle {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ── Carousel layout ── */
+.pn-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  perspective: 1200px;
+}
+
+/* ── Arrow buttons ── */
+.pn-arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--surface);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.25s, border-color 0.25s, transform 0.2s;
+  z-index: 5;
+}
+
+.pn-arrow:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+/* ── Side preview cards ── */
+.pn-side-card {
+  width: 200px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  background: var(--surface);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+  opacity: 0.55;
+  transform: scale(0.92);
+}
+
+.pn-side-card:hover {
+  opacity: 0.85;
+  transform: scale(0.96);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.pn-mini-browser {
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pn-mini-screen {
+  width: 100%;
+  height: 110px;
+  overflow: hidden;
+}
+
+.pn-mini-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pn-side-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 12px 14px;
+  margin: 0;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Featured card ── */
+.pn-featured {
+  flex: 1 1 auto;
+  max-width: 580px;
+  min-width: 0;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background: var(--surface);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+/* ── Browser mockup ── */
+.pn-browser {
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pn-browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Dots (shared between mini + featured) */
+.pn-browser-dots {
+  display: flex;
+  gap: 6px;
+  padding: 8px 12px;
+}
+
+.pn-browser-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.pn-browser-dots span:nth-child(1) {
+  background: #ff5f57;
+}
+.pn-browser-dots span:nth-child(2) {
+  background: #ffbd2e;
+}
+.pn-browser-dots span:nth-child(3) {
+  background: #28c840;
+}
+
+/* Mini browser overrides */
+.pn-mini-browser .pn-browser-dots {
+  padding: 6px 10px;
+}
+.pn-mini-browser .pn-browser-dots span {
+  width: 7px;
+  height: 7px;
+}
+
+.pn-browser-url {
+  flex: 1;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: var(--bg-soft);
+  padding: 6px 14px;
+  border-radius: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border: 1px solid var(--border-color);
+}
+
+.pn-browser-viewport {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.pn-browser-viewport img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Project info ── */
+.pn-info {
+  padding: 28px 28px 32px;
+}
+
+.pn-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--primary);
+  background: var(--chip-bg);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.pn-project-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 10px;
+}
+
+.pn-desc {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0 0 20px;
+}
+
+.pn-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.pn-pill {
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  border: 1px solid var(--border-color);
+  transition: background 0.2s;
+}
+
+.pn-pill:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* ── Action buttons ── */
+.pn-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.pn-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.25s;
+}
+
+.pn-btn:hover {
+  transform: translateY(-2px);
+}
+
+.pn-btn--live {
+  background: var(--primary);
+  color: #fff;
+}
+
+.pn-btn--live:hover {
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+}
+
+.pn-btn--github {
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border-color);
+}
+
+.pn-btn--github:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Footer navigation ── */
+.pn-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.pn-footer-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 4px;
+  transition: color 0.2s;
+}
+
+.pn-footer-nav:hover {
+  color: var(--primary);
+}
+
+/* ── Pagination dots ── */
+.pn-pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pn-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: var(--border-color);
+  transition: width 0.3s, background 0.3s, border-radius 0.3s;
+}
+
+.pn-dot--active {
+  width: 32px;
+  border-radius: 999px;
+  background: var(--primary);
+}
+
+/* ── Counter ── */
+.pn-counter {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-family: "Courier New", monospace;
+}
+
+.pn-counter-current {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.pn-counter-sep {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+.pn-counter-total {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .pn-carousel {
+    gap: 16px;
+  }
+
+  .pn-side-card {
+    width: 160px;
+  }
+
+  .pn-mini-screen {
+    height: 85px;
+  }
+
+  .pn-browser-viewport {
+    height: 220px;
+  }
+
+  .pn-featured {
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pn-section {
+    padding: 70px 4% 60px;
+    gap: 32px;
+  }
+
+  .pn-carousel {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .pn-side-card {
+    display: none;
+  }
+
+  .pn-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .pn-arrow--left {
+    left: 4px;
+  }
+
+  .pn-arrow--right {
+    right: 4px;
+  }
+
+  .pn-featured {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .pn-browser-viewport {
+    height: 200px;
+  }
+
+  .pn-info {
+    padding: 20px 20px 24px;
+  }
+
+  .pn-project-name {
+    font-size: 1.3rem;
+  }
+
+  .pn-buttons {
+    flex-direction: column;
+  }
+
+  .pn-btn {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .pn-title {
+    font-size: 1.6rem;
+  }
+
+  .pn-browser-viewport {
+    height: 160px;
+  }
+
+  .pn-counter-current {
+    font-size: 1.4rem;
+  }
+
+  .pn-footer {
+    gap: 16px;
+  }
+
+  .pn-arrow {
+    width: 40px;
+    height: 40px;
+  }
+}

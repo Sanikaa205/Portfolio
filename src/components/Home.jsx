@@ -1,6 +1,6 @@
 import React from "react";
 import Intro from "./Intro";
-import Projects from "./Projects";
+import Project_New from "./Project_New";
 import Skills from "./Skills";
 import About from "./About";
 import Contact from "./Contact";
@@ -13,7 +13,7 @@ function Home() {
       <Intro />
       <About />
       <Skills />
-      <Projects />
+      <Project_New />
       <Contact/>
     </div>
   );
